@@ -20,4 +20,5 @@ do
 		-f alsa -ac 2 -thread_queue_size 1024 -i hw:Loopback,1,0 -c:v copy -c:a aac -filter:a "volume=${VOLUME}" -map 0:v -map 1:a \
 		-f tee "${tee_muxer_output}"
 	 echo "[ERROR] `date '+%Y-%m-%d %H:%M:%S'` Stream crashed. Restarting..." >> ${SCRIPT_DIR}/event.log
+	 on_stream_restart
 done
