@@ -3,9 +3,9 @@ Lightweight 24/7 Twitch and YouTube Music Radio using FFMPEG.
 
 
 ## Dependencies
-Install the following software on your machine: *screen*, *alsa*, *mpg123* and *ffmpeg*
+Install the following software on your machine:  *git*, *screen*, *alsa*, *mpg123* and *ffmpeg*
 ```bash
-sudo apt install screen alsa mpg123 ffmpeg
+sudo apt install git screen alsa mpg123 ffmpeg
 ```
 
 
