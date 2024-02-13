@@ -16,11 +16,11 @@ git clone https://github.com/NoniDOTio/LiveStreamRadio.git
 ```
 - Add ALSA loopback (on some systems, you will have to re-run this command after every reboot)
 ```bash
-modprobe snd-aloop pcm_substreams=1
+sudo modprobe snd-aloop pcm_substreams=1
 ```
-- Add the following line to `~/.asoundrc`
+- Make loopback the default PCM device by adding it to `.asoundrc`
 ```bash
-pcm.!default { type plug slave.pcm "hw:Loopback,0,0" }
+echo 'pcm.!default { type plug slave.pcm "hw:Loopback,0,0" }' >> ~/.asoundrc
 ```
 
 
